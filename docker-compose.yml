@@ -52,7 +52,7 @@ services:
   
   nuxt:
     build: nuxt/mini-web
-    container_name: nuxt-docker
+    container_name: nuxt-cont
     ports: 
       - 8082:8082
     depends_on:
@@ -132,7 +132,6 @@ services:
 
 volumes:
   mariadb_data:
-    driver: local
   moodle_data:
 
 networks:
