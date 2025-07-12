@@ -5,4 +5,4 @@
 - compose-docker.yml : Contiene todo lo necesario para crear la imagen, se ejecuta con: ```compose-docker up --build```
 
  ## Directorios
-- ngix : Contiene los .config necesarios (REQUIERE TAMBIEN MODIFICAR ARCHIVOS PARA DNS, no funcional por si solo)
+- nginx : Contiene los .config necesarios (REQUIERE TAMBIEN MODIFICAR ARCHIVOS PARA DNS, no funcional por si solo)
