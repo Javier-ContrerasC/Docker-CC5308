@@ -114,7 +114,7 @@ services:
 
   nuxt-db-init:
     image: bitnami/mariadb:11.3
-    container_name: wordpress-db-init
+    container_name: nuxt-db-init
     restart: "no"
     entrypoint: >
       sh -c "
