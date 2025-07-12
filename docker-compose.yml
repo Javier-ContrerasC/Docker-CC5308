@@ -60,21 +60,21 @@ services:
     networks:
       - backend
 
-  # nginx:
-  #   image: nginx:alpine
-  #   container_name: nginx-proxy
-  #   restart: always
-  #   ports:
-  #     - "80:80"
-  #   volumes:
-  #     - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-  #     - ./nginx/conf.d:/etc/nginx/conf.d:ro
-  #   depends_on:
-  #     - moodle
-  #     - wordpress
-  #     - nuxt
-  #   networks:
-  #     - backend
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    depends_on:
+      - moodle
+      - wordpress
+      - nuxt
+    networks:
+      - backend
 
   moodle-db-init:
     image: bitnami/mariadb:11.3
@@ -112,23 +112,23 @@ services:
     networks:
       - backend
 
-    nuxt-db-init:
-      image: bitnami/mariadb:11.3
-      container_name: wordpress-db-init
-      restart: "no"
-      entrypoint: >
-        sh -c "
-          sleep 10;
-          mariadb -hmariadb -uroot -pcc5308 -e \"
-            CREATE DATABASE IF NOT EXISTS nuxt;
-            CREATE USER IF NOT EXISTS 'nuxtuser'@'%' IDENTIFIED BY 'nuxtpass';
-            GRANT ALL PRIVILEGES ON nuxt.* TO 'nuxtuser'@'%';
-            FLUSH PRIVILEGES;\"
-        "
-      depends_on:
-        - mariadb
-      networks:
-        - backend
+  nuxt-db-init:
+    image: bitnami/mariadb:11.3
+    container_name: wordpress-db-init
+    restart: "no"
+    entrypoint: >
+      sh -c "
+        sleep 10;
+        mariadb -hmariadb -uroot -pcc5308 -e \"
+          CREATE DATABASE IF NOT EXISTS nuxt;
+          CREATE USER IF NOT EXISTS 'nuxtuser'@'%' IDENTIFIED BY 'nuxtpass';
+          GRANT ALL PRIVILEGES ON nuxt.* TO 'nuxtuser'@'%';
+          FLUSH PRIVILEGES;\"
+      "
+    depends_on:
+      - mariadb
+    networks:
+      - backend
 
 volumes:
   mariadb_data:
