@@ -1,0 +1,39 @@
+// Imports
+
+// Colors
+
+$dark-grey: #484e4f;
+$light-grey: #697171;
+$dark-blue: #30a0a0;
+$light-blue: #81b9b8;
+$dark-pink: #b33752;
+$light-pink: #cc9aa3;
+$dark-yellow: #f0d228;
+$light-yellow: #dfd5a0;
+$dark-purple: #9966cc;
+$light-purple: #decbef;
+$dark-orange: #f57535;
+$light-orange: #c9a48f;
+$error-red: #ca3b3b;
+$success-green: #349c3d;
+
+:root {
+    // Colors
+    --dark-grey: #{$dark-grey};
+    --light-grey: #{$light-grey};
+    --dark-blue: #{$dark-blue};
+    --light-blue: #{$light-blue};
+    --dark-pink: #{$dark-pink};
+    --light-pink: #{$light-pink};
+    --dark-yellow: #{$dark-yellow};
+    --light-yellow: #{$light-yellow};
+    --dark-purple: #{$dark-purple};
+    --light-purple: #{$light-purple};
+    --dark-orange: #{$dark-orange};
+    --light-orange: #{$light-orange};
+    --error-red: #{$error-red};
+}
+
+// heights
+$header-height: 80px;
+$footer-height: 30px;
