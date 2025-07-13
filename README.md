@@ -4,5 +4,12 @@
 ## Archivos
 - compose-docker.yml : Contiene todo lo necesario para crear la imagen, se ejecuta con: ```compose-docker up --build```
 
- ## Directorios
+## Directorios
 - nginx : Contiene los .config necesarios (REQUIERE TAMBIEN MODIFICAR ARCHIVOS PARA DNS, no funcional por si solo)
+
+## Integrantes
+- Evelyn Ávila G. 
+- Javier Contreras C.
+- Sebastián González O. 
+- Tomás Ubilla Zavala 
+- Vicente Facundo Onetto R.
