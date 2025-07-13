@@ -8,7 +8,7 @@
 - nginx : Contiene los .config necesarios (REQUIERE TAMBIEN MODIFICAR ARCHIVOS PARA DNS, no funcional por si solo)
 
 ## Web Personalizada
-- se utilizó npm create nuxt mini-web para crear el proyecto y se crearon algunos componentes base desde otro proyecto para recrear una página web. Además, se añade a docker-compose.yml y se agrega su respectivo Dockerfile de manera que se copien los archivos a la máquina y se conecte con nginx y la base de datos.
+- se utilizó npm create nuxt mini-web para crear el proyecto y se utilizaron algunos componentes base desde otro proyecto para recrear una página web. Además, se añade a docker-compose.yml y se agrega su respectivo Dockerfile de manera que se copien los archivos a la máquina y se conecte con nginx y la base de datos.
 
 ## Integrantes
 - Evelyn Ávila G. 
