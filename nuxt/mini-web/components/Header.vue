@@ -66,6 +66,7 @@
         left: 0;
         width: 100%;
         z-index: 1000;
+        font-family: 'Arial', sans-serif;
 
         .header-left {
             display: flex;
